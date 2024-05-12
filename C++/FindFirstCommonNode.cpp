@@ -49,25 +49,25 @@ void deleteList(ListNode* &head){
     }
 }
 int main(){
-    ListNode* list1 = new ListNode(1);
-    list1->next=new ListNode(2);
-    list1->next->next=new ListNode(6);
-    list1->next->next->next=new ListNode(7);
+    ListNode* phead1 = new ListNode(1);
+    phead1->next=new ListNode(2);
+    phead1->next->next=new ListNode(6);
+    phead1->next->next->next=new ListNode(7);
 
-    ListNode* list2 = new ListNode(4);
-    list2->next=new ListNode(5);
-    list2->next->next = list1->next->next;
+    ListNode* phead2 = new ListNode(4);
+    phead2->next=new ListNode(5);
+    phead2->next->next = phead1->next->next;
     Solution solution;
-    ListNode* commonNode= solution.FindFirstCommonNode(list1,list2);
+    ListNode* commonNode= solution.FindFirstCommonNode(phead1,phead2);
 
     if(commonNode){
         std::cout<<"The first common node is:"<<commonNode->val<<std::endl;
     }
     else{
-        std::cout<<"There is common node."<<std::endl;
+        std::cout<<"There is not common node."<<std::endl;
     }
     
-    deleteList(list1);
+    deleteList(phead1);
 
     return 0;
 }
