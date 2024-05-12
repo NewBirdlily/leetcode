@@ -64,7 +64,7 @@ int main(){
         std::cout<<"The first common node is:"<<commonNode->val<<std::endl;
     }
     else{
-        std::cout<<"There is common node."<<std::endl;
+        std::cout<<"There is not common node."<<std::endl;
     }
     
     deleteList(list1);
